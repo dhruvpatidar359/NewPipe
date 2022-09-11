@@ -200,7 +200,9 @@ public class Utility {
         }
 
         cm.setPrimaryClip(ClipData.newPlainText("text", str));
-        Toast.makeText(context, R.string.msg_copied, Toast.LENGTH_SHORT).show();
+        if(android.os.Build.VERSION.SDK_INT < 33) {
+            Toast.makeText(context, R.string.msg_copied, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public static String checksum(StoredFileHelper source, String algorithm) {
