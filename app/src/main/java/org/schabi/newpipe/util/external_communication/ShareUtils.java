@@ -314,7 +314,7 @@ public final class ShareUtils {
         }
 
         clipboardManager.setPrimaryClip(ClipData.newPlainText(null, text));
-        if(android.os.Build.VERSION.SDK_INT < 33) {
+        if (android.os.Build.VERSION.SDK_INT < 33) {
             Toast.makeText(context, R.string.msg_copied, Toast.LENGTH_SHORT).show();
         }
     }
